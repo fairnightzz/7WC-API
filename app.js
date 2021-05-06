@@ -15,7 +15,7 @@ async function getTasks() {
 }
 
 async function load_list() {
-  let html = "<ul>";
+  let html = '<ul>';
   const response = await getTasks();
   // console.log(response)
   for (var i = 0; i < response.length; i++) {
