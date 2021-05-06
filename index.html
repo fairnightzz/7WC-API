@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="stylesheets/index.css">
+    <script src="app.js"></script>
+    <noscript>You need to enable JavaScript to use the ToDo List!</noscript>
+    <title>
+      Todo List
+    </title>
+  </head>
+
+  <body>
+    <div id="main-container">
+      <div>
+        <h1>TODO List</h1>
+        <div id="contents">
+          <script>load_list()</script>
+        </div>
+      </div>
+     <form class="form-container">
+        <h1>Add Task</h1>
+        <textarea name="task_contents" id="task_contents" cols="50" rows="10"></textarea>
+        <button type='submit' onclick="submitTask();// return false" class="btn">Add</button>
+      </form>
+    </div>
+  </body>
+</html>

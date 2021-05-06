@@ -1,0 +1,58 @@
+html {
+  background-color: #1D1D1E;
+  color: white;
+  font-family: lato, arial;
+}
+
+#main-container {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+
+#contents {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.taskButton {
+  background-color: green; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  opacity: 0.9;
+  -webkit-transition-duration: 0.4s; /* Safari */
+  transition-duration: 0.4s;
+}
+
+.btn:hover {
+  opacity: 1;
+}
+
+.form-container {
+  padding: 10px;
+}
+.form-container input[type=text], .form-container textarea {
+  width: 90%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+}
+.form-container .btn {
+  background-color: #04AA6D;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+  color: white;
+}
