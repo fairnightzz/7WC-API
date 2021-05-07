@@ -302,7 +302,7 @@ Head over to ```app.js```, and create an asynchronous function following the doc
 
 ```javascript
 async function submitTask() {
-  const URL = 'http://7wc.zhehaizhang.com/task/post/zhehai'
+  const URL = 'https://7wc.zhehaizhang.com/task/post/[username]'
   const Data = {
     'contents': document.getElementById('task_contents').value
   }
@@ -373,7 +373,7 @@ Now, let's create the ```clearTask(id)``` function:
 
 ```javascript
 async function clearTask(id) {
-  const URL = 'http://localhost:2000/task/delete/zhehai'
+  const URL = 'https://7wc.zhehaizhang.com/task/delete/[username]'
   const Data = {
     'id': id
   }

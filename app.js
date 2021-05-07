@@ -1,7 +1,7 @@
 'use strict'
 
 async function getTasks() {
-  const URL = 'http://localhost:2000/task/get/zhehai'
+  const URL = 'https://7wc.zhehaizhang.com/task/get/275707420595191808'
   const Params = {
     headers: {
       'x-access-token': '7wc-zhehai',
@@ -21,7 +21,7 @@ async function load_list() {
   for (var i = 0; i < response.length; i++) {
     html+= '<li> <h2> ID:' + response[i].taskid + '</h2> <p>' + response[i].contents + ` </p> 
               <form>
-                <button class="taskButton btn" type='submit' onclick="clearTask(${response[i].taskid});"> Clear Task </button>
+                <button class="taskButton btn" type='submit' onclick="clearTask(${response[i].taskid}); return false"> Clear Task </button>
               </form>
             </li>`
   }
@@ -31,7 +31,7 @@ async function load_list() {
 }
 
 async function submitTask() {
-  const URL = 'http://localhost:2000/task/post/zhehai'
+  const URL = 'https://7wc.zhehaizhang.com/task/post/275707420595191808'
   const Data = {
     'contents': document.getElementById('task_contents').value
   }
@@ -45,10 +45,12 @@ async function submitTask() {
   }
   console.log(Params)
   await fetch(URL, Params)
+  document.getElementById('task_contents').value = ""
+  load_list()
 }
 
 async function clearTask(id) {
-  const URL = 'http://localhost:2000/task/delete/zhehai'
+  const URL = 'https://7wc.zhehaizhang.com/task/delete/275707420595191808'
   const Data = {
     'id': id
   }
@@ -61,4 +63,5 @@ async function clearTask(id) {
     method: 'DELETE'
   }
   await fetch(URL, Params)
+  load_list()
 }
