@@ -41,7 +41,7 @@ This API is hosted at https://7wc.zhehaizhang.com
   - Clear Task
 
   ```
-  https://7wc.zhehaizhang.com/task/clear/[username]
+  https://7wc.zhehaizhang.com/task/delete/[username]
   ```
 
   This endpoint takes in a JSON object containing the id of the task, and removes it.

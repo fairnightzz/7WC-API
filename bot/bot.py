@@ -16,7 +16,7 @@ client = commands.Bot(command_prefix=">")
 @client.event
 async def on_ready():
     global started
-    await client.change_presence(activity = discord.Game(name = '> for a list of commands'))
+    await client.change_presence(activity = discord.Game(name = '>request for a code!'))
     if not started:
         started = True
         #Before you run tasks take the text file
